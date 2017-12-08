@@ -145,10 +145,10 @@ int run_instructions(const std::vector<Instruction>& instructions, std::unordere
 
         if (interpret_condition(instruction.condition, registers[instruction.condition.register_name]))
         {
-                interpret_operation(instruction.operation, registers[instruction.modify_register], instruction.value);
+            interpret_operation(instruction.operation, registers[instruction.modify_register], instruction.value);
 
-                if (registers[instruction.modify_register] > max_value)
-                    max_value = registers[instruction.modify_register];
+            if (registers[instruction.modify_register] > max_value)
+                max_value = registers[instruction.modify_register];
         }
     }
 
