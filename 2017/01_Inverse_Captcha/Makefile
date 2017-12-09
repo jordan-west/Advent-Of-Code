@@ -1,4 +1,5 @@
 CC = g++
+FLAGS = -std=c++11
 
 solution: solution.cpp
-	$(CC) solution.cpp -o solution
+	$(CC) $(FLAGS) solution.cpp -o solution
